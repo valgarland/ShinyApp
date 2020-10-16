@@ -21,11 +21,11 @@ str(listings)
 #Looking into availabilities of listings based on calendar data
 
 #Creating a helper function to clean the calendar data
-clean_calendar = function(df, yr){
+clean_calendar = function(df, yr, m){
   require(dplyr)
   require(lubridate)
   df <- df %>% mutate(date=parse_date_time(date,orders = 'Ymd')) %>%
-    mutate(year=year(date)) %>%
+    mutate(year=year(date), month=month(date)) %>%
     filter(year==yr) %>%
     arrange(listing_id) %>%
     group_by(listing_id) %>%
