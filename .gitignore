@@ -1,2 +1,22 @@
-Data
+################################
+#Mac specific files
+
 .DS_Store
+################################
+#Data files
+
+*.csv
+Airbnb_App/Data/
+Data/
+
+################################
+#Jupyter Notebook files
+
+.ipynb_checkpoints
+
+################################
+#R files
+
+ggplot2_results.R
+
+################################
